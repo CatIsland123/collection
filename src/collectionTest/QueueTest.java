@@ -20,7 +20,9 @@ public class QueueTest {
           Queue<Character> qc=new LinkedList<Character>();
           for(char c:"Brontosaurus".toCharArray())
         	  qc.offer(c);
+          System.out.println(qc);
           printQ(qc);
+          System.out.println(qc);
 	}
 
 }
