@@ -21,7 +21,16 @@ public class StackTest {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-         
+         StackTest st=new StackTest();
+         st.push("Spring");
+         st.push("Summer");
+         st.push("Autumn");
+         st.push("Winter");
+         System.out.println(st.pop());//输出并删去第一个元素
+         System.out.println(st.peek());//输出第一个元素
+         System.out.println(st.pop());
+         System.out.println(st.empty());//判断栈是否为空
+         System.out.println(st);
 	}
 
 }
