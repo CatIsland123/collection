@@ -26,18 +26,27 @@ class Student implements Comparable{//comparable是在集合内使用
 		// TODO Auto-generated method stub
 		Student s=(Student) o;
 		int result=goal>s.goal?-1:(goal==s.goal?0:1);
-		return 0;
+		return result;
 	}
 	
 }
-
+class studentComparator implements Comparator<Student>{
+	public int compare(Student s1, Student s2) {
+		// TODO Auto-generated method stub
+		  //降序排序
+			return s1.num-s2.num;
+		
+	}
+	
+}
 public class studentTest {
 
 	
 		// TODO Auto-generated method stub
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
-		Collection <Student> list=new ArrayList<Student>();
+		ArrayList <Student> list=new ArrayList<Student>();
+		//Collections.sort(List list,Comparator comparator说明只能是List或者是List的子类
 		//ArrayList<Student> list1=new ArrayList<Student>();
 		//List<Student>list2=new ArrayList<Student>();
 		Student s=new Student("刘三",03,89);
@@ -48,6 +57,13 @@ public class studentTest {
 		Iterator<Student> it=list.iterator();
 		while(it.hasNext()) {
 			Student student=it.next();
+			System.out.println(student);
+		}
+		Collections.sort(list, new studentComparator());
+		System.out.println("按学号降序：");
+		Iterator<Student> it2=list.iterator();
+		while(it2.hasNext()) {
+			Student student=it2.next();
 			System.out.println(student);
 		}
 		}
