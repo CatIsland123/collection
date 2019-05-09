@@ -62,10 +62,7 @@ public class studentTest {
 		Collections.sort(list, new studentComparator());
 		System.out.println("按学号降序：");
 		Iterator<Student> it2=list.iterator();
-		while(it2.hasNext()) {
-			Student student=it2.next();
-			System.out.println(student);
-		}
+		it2.forEachRemaining(obj->System.out.println(obj+" "));
 		}
 	}
 
