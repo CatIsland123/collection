@@ -34,7 +34,7 @@ class studentComparator implements Comparator<Student>{
 	public int compare(Student s1, Student s2) {
 		// TODO Auto-generated method stub
 		  //降序排序
-			return s1.num-s2.num;
+			return s1.num-s2.num;//s1.num.numcompareTo(s2.num)有错 因为num是int型
 		
 	}
 	
