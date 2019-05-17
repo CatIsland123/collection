@@ -27,10 +27,15 @@ public class MapDemon {
           }
          System.out.println();
           //使用entry
-          Iterator it1=map.entrySet().iterator();
+         /*
+          Iterator it1=map.entrySet().iterator();     
           while(it1.hasNext()) {
 		  Map.Entry<student2, String>entry=(Entry<student2, String>) it1.next();
           System.out.println(entry.getKey()+" "+entry.getValue());
+          }
+          */
+          for(Map.Entry<student2, String> entry:map.entrySet()) {
+        	  System.out.println(entry.getKey()+" "+entry.getValue());
           }
            
 	}
