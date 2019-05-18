@@ -41,7 +41,7 @@ public class student2 {
 				return false;
 			student2 s=(student2)obj;
 			if((this.name.equals(s.name))&&(this.age==s.age))
-				return true;
+				return true;//若为false 则会出现两个Aane
 			else
 				return false;
 			
